@@ -1,0 +1,23 @@
+<h2>Disciplinas Matriculadas</h2> 
+<div>
+<p> Adicione Aqui</p> 
+<input #input type="text"/>
+<button (click)="tasks.add(input.value);">+</button>
+ </div>
+ <table border="1"> 
+ <tr>
+   <th>Codigo</th>
+   <th>Disciplinas</th>
+   <th>Dia</th>
+   <th>Hora</th>
+   <th>Ementa</th>
+ </tr>
+ <tr *ngFor="let task of tasks.getList(), index as i">
+ <td>{{task.codigo}}</td>
+ <td>{{task.nome}}</td>
+ <td>{{task.dia}}</td>
+ <td>{{task.hora}}</td>
+ <td>{{task.ementa}}</td>
+<button (click)="tasks.remove(i)" style="cursor: pointer;">
+-
+</button>
